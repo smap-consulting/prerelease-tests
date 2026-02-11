@@ -51,6 +51,13 @@ To target a different server:
 SMAP_BASE_URL=https://staging.example.com npm run test:e2e
 ```
 
+To set usernames and passwords:
+
+```bash
+export SMAP_TEST1_USER="test1"
+export SMAP_TEST1_PASSWORD="*******"
+```
+
 ## Regression Tests
 
 | File | Description | Users | Surveys |
@@ -59,4 +66,5 @@ SMAP_BASE_URL=https://staging.example.com npm run test:e2e
 
 ## Proactive Tests
 
-| File | Description |
+| File | Description | Users | Surveys |
+|------|-------------|-------|---------|
