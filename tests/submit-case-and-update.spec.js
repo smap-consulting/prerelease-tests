@@ -1,7 +1,8 @@
 const { test, expect } = require("@playwright/test");
 
-const SMAP_USER = process.env.SMAP_USER || "test1";
-const SMAP_PASSWORD = process.env.SMAP_PASSWORD || "testx!21";
+const SMAP_TEST1_USER = process.env.SMAP_TEST1_USER || "test1";
+const SMAP_TEST1_PASSWORD = process.env.SMAP_TEST1_PASSWORD;
+if (!SMAP_TEST1_PASSWORD) throw new Error("SMAP_TEST1_PASSWORD env var is required");
 
 test("submit case and update", async ({ page }) => {
   test.setTimeout(180000);
@@ -27,8 +28,8 @@ test("submit case and update", async ({ page }) => {
     await page.goto("/app/myWork/index.html");
 
     if ((await page.title()) === "Login") {
-      await page.fill("#username", SMAP_USER);
-      await page.fill("#password", SMAP_PASSWORD);
+      await page.fill("#username", SMAP_TEST1_USER);
+      await page.fill("#password", SMAP_TEST1_PASSWORD);
       await page.click("button[name=\"login\"]");
     }
 
