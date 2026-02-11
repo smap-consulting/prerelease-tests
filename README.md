@@ -12,10 +12,30 @@ so each test will cover a broad range of features.
 
 ## Setup
 
+### Install
+
 ```bash
 npm install
 npm run install:playwright
 ```
+
+### Resources
+
+The following users and surveys are referenced in the scripts.  Refer to
+the script list below for the specific resources required by each script.
+
+#### Users
+
+| Name   | Security Groups |
+|--------|-----------------|
+| test1  | Enumerator, Manage Console, Manage Data| 
+
+####
+
+| Name | Download Link | Bundle |
+|------|---------------|--------|
+| main | https://docs.google.com/spreadsheets/d/13stRrE7sddQv2U5hyvwkBH--IpbLTTvQOZ_UiVqRu58/edit?usp=sharing | main |
+ | oversight | https://docs.google.com/spreadsheets/d/1ZrH3YfmmV23x0UDu_nXTXm67ZX6Rxvh04j3n3Z_mqd4/edit?usp=sharing  | main |
 
 ## Running tests
 
@@ -33,9 +53,9 @@ SMAP_BASE_URL=https://staging.example.com npm run test:e2e
 
 ## Regression Tests
 
-| File | Description |
-|------|-------------|
-| `tests/submit-case-and-update.spec.js` | Workflow test — login, submit case, verify tracking table, update via oversight form |
+| File | Description | Users | Surveys |
+|------|-------------|-------|---------|
+| `tests/submit-case-and-update.spec.js` | Workflow test — login, submit case, verify tracking table, update via oversight form | test1 | main, oversight |
 
 ## Proactive Tests
 
