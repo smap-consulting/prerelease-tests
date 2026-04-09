@@ -1,8 +1,5 @@
 const { test, expect } = require("@playwright/test");
-
-const SMAP_TEST1_USER = process.env.SMAP_TEST1_USER || "test1";
-const SMAP_TEST1_PASSWORD = process.env.SMAP_TEST1_PASSWORD;
-if (!SMAP_TEST1_PASSWORD) throw new Error("SMAP_TEST1_PASSWORD env var is required");
+const { login } = require("./helpers");
 
 test("submit case and update", async ({ page }) => {
   test.setTimeout(180000);
@@ -25,15 +22,7 @@ test("submit case and update", async ({ page }) => {
   };
 
   await test.step("Login", async () => {
-    await page.goto("/app/myWork/index.html");
-
-    if ((await page.title()) === "Login") {
-      await page.fill("#username", SMAP_TEST1_USER);
-      await page.fill("#password", SMAP_TEST1_PASSWORD);
-      await page.click("button[name=\"login\"]");
-    }
-
-    await expect(page).toHaveURL(/\/app\/myWork\/index\.html$/);
+    await login(page);
   });
 
   const id1Value = `id1-${Date.now()}`;
@@ -63,6 +52,9 @@ test("submit case and update", async ({ page }) => {
 
   await test.step("Verify in tracking table", async () => {
     await mainPage.goto("/app/tasks/managed_forms.html");
+    await mainPage.waitForLoadState("networkidle");
+
+    await mainPage.selectOption("#survey_name", { label: "main" });
     await mainPage.waitForLoadState("networkidle");
 
     const trackingTable = mainPage.locator("#trackingTable");
@@ -125,6 +117,8 @@ test("submit case and update", async ({ page }) => {
       await mainPage.goto("/app/tasks/managed_forms.html");
     }
     await mainPage.locator("#hideFilters").waitFor({ timeout: 60000 });
+    await mainPage.selectOption("#survey_name", { label: "main" });
+    await mainPage.waitForLoadState("networkidle");
 
     const refreshedTable = mainPage.locator("#trackingTable");
 
