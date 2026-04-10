@@ -35,7 +35,8 @@ the script list below for the specific resources required by each script.
 | Name | Download Link | Bundle |
 |------|---------------|--------|
 | main | https://docs.google.com/spreadsheets/d/13stRrE7sddQv2U5hyvwkBH--IpbLTTvQOZ_UiVqRu58/edit?usp=sharing | main |
- | oversight | https://docs.google.com/spreadsheets/d/1ZrH3YfmmV23x0UDu_nXTXm67ZX6Rxvh04j3n3Z_mqd4/edit?usp=sharing  | main |
+| oversight | https://docs.google.com/spreadsheets/d/1ZrH3YfmmV23x0UDu_nXTXm67ZX6Rxvh04j3n3Z_mqd4/edit?usp=sharing  | main |
+| edit_test | https://docs.google.com/spreadsheets/d/1zEx7U-KHZv053FLaRsNsofiwAjRgbUPkSyIFDnIDnGQ/edit?usp=sharing | |
 
 ## Running tests
 
@@ -43,6 +44,8 @@ the script list below for the specific resources required by each script.
 npm run test:e2e          # run all tests
 npm run test:e2e:ui       # Playwright UI mode
 npm run test:e2e:debug    # run with PWDEBUG=1
+npm run test:e2e -- --grep "submit case"  # run the submit case and update test
+npm run test:e2e -- --grep "choices page" # run the edit choice list test
 ```
 
 To target a different server:
@@ -63,6 +66,7 @@ export SMAP_TEST1_PASSWORD="*******"
 | File | Description | Users | Surveys |
 |------|-------------|-------|---------|
 | `tests/submit-case-and-update.spec.js` | Workflow test — login, submit case, verify tracking table, update via oversight form | test1 | main, oversight |
+| `tests/editor-choices-page.spec.js` | Check that choice lists can be edited in the online editor — login, open survey in editor, view choices | test1 | edit_choice |
 
 ## Proactive Tests
 
