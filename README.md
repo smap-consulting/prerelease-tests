@@ -34,7 +34,7 @@ the script list below for the specific resources required by each script.
 
 | Name   | Security Groups | Projects |
 |--------|-----------------|----------|
-| test1  | Enumerator, Manage Console, Manage Data| Test |
+| test1  | Enumerator, Manage Console, Manage Data, Analyst | Test |
 
 #### Forms
 
