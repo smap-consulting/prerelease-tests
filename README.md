@@ -27,6 +27,7 @@ the script list below for the specific resources required by each script.
 #### Projects
 
 | Name   |
+|--------|
 | Test   |
 
 #### Users
