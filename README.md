@@ -24,18 +24,25 @@ npm run install:playwright
 The following users and surveys are referenced in the scripts.  Refer to
 the script list below for the specific resources required by each script.
 
+#### Projects
+
+| Name   |
+| Test   |
+
 #### Users
 
-| Name   | Security Groups |
-|--------|-----------------|
-| test1  | Enumerator, Manage Console, Manage Data| 
+| Name   | Security Groups | Projects |
+|--------|-----------------|----------|
+| test1  | Enumerator, Manage Console, Manage Data| Test |
 
-####
+#### Forms
 
-| Name | Download Link | Bundle |
-|------|---------------|--------|
-| main | https://docs.google.com/spreadsheets/d/13stRrE7sddQv2U5hyvwkBH--IpbLTTvQOZ_UiVqRu58/edit?usp=sharing | main |
- | oversight | https://docs.google.com/spreadsheets/d/1ZrH3YfmmV23x0UDu_nXTXm67ZX6Rxvh04j3n3Z_mqd4/edit?usp=sharing  | main |
+Add these forms to project test
+
+| Name | Download Link | Bundle | Project |
+|------|---------------|--------|---------|
+| main | https://docs.google.com/spreadsheets/d/13stRrE7sddQv2U5hyvwkBH--IpbLTTvQOZ_UiVqRu58/edit?usp=sharing | main | Test |
+| oversight | https://docs.google.com/spreadsheets/d/1ZrH3YfmmV23x0UDu_nXTXm67ZX6Rxvh04j3n3Z_mqd4/edit?usp=sharing  | main | Test |
 
 ## Running tests
 
