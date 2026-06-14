@@ -4,3 +4,4 @@ export SMAP_BASE_URL=https://dev.smap.com.au
 
 npm run test:e2e -- --grep "submit case"
 npm run test:e2e -- --grep "choices page"
+npm run test:e2e -- --grep "create task group"

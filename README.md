@@ -32,9 +32,10 @@ the script list below for the specific resources required by each script.
 
 #### Users
 
-| Name   | Security Groups | Projects |
-|--------|-----------------|----------|
-| test1  | Enumerator, Manage Console, Manage Data, Analyst | Test |
+| Name  | Security Groups                                  | Projects |
+|-------|--------------------------------------------------|----------|
+| test1 | Enumerator, Manage Console, Manage Data, Analyst | Test |
+| test2 | Administrator                                    | Test |
 
 #### Forms
 
@@ -54,6 +55,7 @@ npm run test:e2e:ui       # Playwright UI mode
 npm run test:e2e:debug    # run with PWDEBUG=1
 npm run test:e2e -- --grep "submit case"  # run the submit case and update test
 npm run test:e2e -- --grep "choices page" # run the edit choice list test
+npm run test:e2e -- --grep "create task group" # run the task group creation test
 ```
 
 To target a different server:
@@ -66,6 +68,8 @@ To set usernames and passwords:
 
 ```bash
 export SMAP_TEST1_USER="test1"
+export SMAP_TEST1_PASSWORD="*******"
+export SMAP_TEST2_USER="test2"
 export SMAP_TEST1_PASSWORD="*******"
 ```
 
