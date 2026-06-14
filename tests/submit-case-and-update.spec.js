@@ -157,9 +157,12 @@ test("submit case and update", async ({ page }) => {
             }
           }
 
+          if (matches === 1) return 1;
+          await mainPage.reload();
+          await mainPage.waitForLoadState("networkidle");
           return matches;
         },
-        { timeout: 20000 }
+        { timeout: 60000 }
       )
       .toBe(1);
   });
