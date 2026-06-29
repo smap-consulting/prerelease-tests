@@ -79,8 +79,10 @@ export SMAP_TEST1_PASSWORD="*******"
 |------|-------------|-------|---------|
 | `tests/submit-case-and-update.spec.js` | Workflow test — login, submit case, verify tracking table, update via oversight form | test1 | main, oversight |
 | `tests/editor-choices-page.spec.js` | Check that choice lists can be edited in the online editor — login, open survey in editor, view choices | test1 | edit_choice |
+| `tests/create-task-group.spec.js` | Create a new task group using the task management page. | test2 | barcode |
 
 ## Proactive Tests
 
 | File | Description | Users | Surveys |
 |------|-------------|-------|---------|
+| `tests/create-workflow-form.spec.js` | Add an email task using the workflow interface and confirm that the target survey can be made the same as the triggering survey | test2 | main |
