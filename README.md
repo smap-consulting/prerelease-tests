@@ -150,11 +150,11 @@ The monitor tests also accept `SMAP_MONITOR_PROJECT` (default `Monitor Test`) an
 
 ## Regression Tests
 
-| File | Description | Users | Surveys |
-|------|-------------|-------|---------|
-| `tests/submit-case-and-update.spec.js` | Workflow test — login, submit case, verify tracking table, update via oversight form | test1 | main, oversight |
-| `tests/editor-choices-page.spec.js` | Check that choice lists can be edited in the online editor — login, open survey in editor, view choices | test1 | edit_choice |
-| `tests/create-task-group.spec.js` | Create a new task group using the task management page. | test2 | barcode |
+| File | Description |
+|------|-------------|
+| `tests/submit-case-and-update.spec.js` | Workflow test — login, submit case, verify tracking table, update via oversight form |
+| `tests/editor-choices-page.spec.js` | Check that choice lists can be edited in the online editor — login, open survey in editor, view choices |
+| `tests/create-task-group.spec.js` | Create a new task group using the task management page. |
 
 ## Proactive Tests
 
