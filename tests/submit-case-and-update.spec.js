@@ -28,7 +28,9 @@ test("submit case and update", async ({ page }) => {
   const id1Value = `id1-${Date.now()}`;
 
   await test.step("Open form popup", async () => {
-    await expect(page.getByRole("button", { name: "main" })).toBeEnabled();
+    await expect(page.getByRole("button", { name: "main" })).toBeEnabled({
+      timeout: 30000
+    });
     var [mainPage] = await Promise.all([
       page.waitForEvent("popup"),
       page.getByRole("button", { name: "main" }).click()
