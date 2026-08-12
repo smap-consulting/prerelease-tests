@@ -158,6 +158,8 @@ The monitor tests also accept `SMAP_MONITOR_PROJECT` (default `Monitor Test`) an
 
 ## Proactive Tests
 
-| File | Description | Users | Surveys |
-|------|-------------|-------|---------|
-| `tests/create-workflow-form.spec.js` | Add an email task using the workflow interface and confirm that the target survey can be made the same as the triggering survey | test2 | main |
+| File | Description                                                                                                                                      |
+|------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| `tests/create-workflow-form.spec.js` | Add an email task using the workflow interface and confirm that the target survey can be made the same as the triggering survey                  | 
+| `tests/monitor-totals.spec.js` | Checks that total submissions reported in the monitor are correct                                                                                | 
+| `tests/monitor-rbac.spec.js` | Checks that role based access control is used correctly to filter which surveys are included in the totals on the monitor page | 
